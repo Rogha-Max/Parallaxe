@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+   <head>
+      <title>parallaxe</title>
+      <meta charset="UTF-8">
+      <meta name="Author" content="Maxime D">
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <!-- YouTube iFrame -->
+      <script src="https://www.youtube.com/iframe_api"></script>
+      <!-- CSS Leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+         crossorigin="" />
+      <!-- JS Leaflet -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+         crossorigin=""></script>
+      <!-- Fiche de style css -->
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- Script -->
+      <script src="./script/parallaxe.js" defer></script>
+      <script src="./script/script.js" defer></script>
+      <script src="./script/api_ytb.js" defer></script>
+      <script src="./script/carousel.js" defer></script>
+      <script src="./script/cinema_fr.geojson" defer></script>
+      <script src="./script/api_leaflet.js" defer></script>
+   </head>
+
+   <body>
+      <header>
+         <a href="#home">
+            <!-- <div id="dune"></div> -->
+            <img style="width: 15vw;" src="./medias/favicon/favicon.jpg" alt="logo_dune">
+         </a>
+      </header>
+      <div id="logos">
+         <div id="studios">
+            <a
+               href="https://www.warnerbros.fr/videos/actu-cinema/Dune-Bande-Annonce-Officielle-VF-Denis-Villeneuve-Timothee-Chalamet"><img
+                  src="./medias/logos/wb_logo.svg" alt="warner bros"></a>
+            <a href="https://www.legendary.com/film/dune/"><img src="./medias/logos/legendary_logo.svg"
+                  alt="lengendary film"></a>
+         </div>
+         <div id="social">
+            <a href="https://www.instagram.com/dunemovie/"><img src="./medias/logos/logo_instagram.svg"
+                  alt="instagram"></a>
+            <a href="https://www.facebook.com/dune"><img src="./medias/logos/logo_facebook.svg" alt="facebook"></a>
+            <a href="https://twitter.com/dunemovie"><img src="./medias/logos/logo_twitter.svg" alt="twitter"></a>
+         </div>
+      </div>
+      <main>
+         <section id="home">
+            <div>
+               <div class="api" id="API_youtube"></div>
+            </div>
+         </section>
+         <section id="about">
+            <h1 style="color: transparent;">About the Film</h1>
+            <div id="textabout">
+               <p>Oscar nominee Denis Villeneuve (“Arrival,” “Blade Runner 2049”) directs Warner Bros. Pictures and
+                  Legendary
+                  Pictures’ “Dune,” the big-screen adaptation of Frank Herbert’s seminal bestselling book.
+                  A mythic and emotionally charged hero’s journey, “Dune” tells the story of Paul Atreides, a brilliant
+                  and
+                  gifted young man born into a great destiny beyond his understanding, who must travel to the most
+                  dangerous
+                  planet in the</p>
+               <p> in the universe to ensure the future of his family and his people. As malevolent forces explode into
+                  conflict over the planet’s exclusive supply of the most precious resource in existence—a commodity
+                  capable of
+                  unlocking humanity’s greatest potential—only those who can conquer their fear will survive.
+                  Villeneuve directed “Dune” from a screenplay he co-wrote with Jon Spaihts and Eric Roth based on the
+                  novel of
+                  the</p>
+               <p>same name written by Frank Herbert. Villeneuve also produced the film with Mary Parent, Cale Boyter
+                  and Joe
+                  Caracciolo, Jr. The executive producers are Tanya Lapointe, Joshua Grode, Herbert W. Gains, Jon
+                  Spaihts,
+                  Thomas Tull, Brian Herbert, Byron Merritt and Kim Herbert.
+
+                  Warner Bros. Pictures and Legendary Pictures Present “Dune”.</p>
+            </div>
+         </section>
+         <section id="characters">
+            <article class="carousel">
+               <div id="carousel_img">
+                  <img src="./medias/characters/chani.jpg" alt="chani">
+                  <img src="./medias/characters/dr_wellington_yueh.jpg" alt="dr wellington yueh">
+                  <img src="./medias/characters/duncan_idaho.jpg" alt="ducan idaho">
+                  <img src="./medias/characters/gurney_halleck.jpg" alt="gurney halleck">
+                  <img src="./medias/characters/lady_jessica.jpg" alt="lady jessica">
+                  <img src="./medias/characters/liet_kynes.jpg" alt="liet kynes">
+                  <img src="./medias/characters/paul_atreides.jpg" alt="paul astreides">
+                  <img src="./medias/characters/rabban_harkonnen.jpg" alt="rabban harkonnen">
+                  <img src="./medias/characters/stilgar.jpg" alt="stilgar">
+               </div>
+               <aside id="carousel_nav">
+                  <button id="prev">
+                     <img src="./medias/carousel/fleche-precedent.png" alt="previous">
+                  </button>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                     <rect width="1" height="1" stroke="#518781" />
+                  </svg>
+                  <button id="next">
+                     <img src="./medias/carousel/fleche-suivant.png" alt="next">
+                  </button>
+               </aside>
+            </article>
+         </section>
+         <section id="medias">
+            <article class="carousel">
+                  <figure>
+                     <img src="./medias/carousel/01.jpg" alt="Image 1">
+                     <img src="./medias/carousel/02.jpg" alt="Image 2">
+                     <img src="./medias/carousel/03.jpg" alt="Image 3">
+                     <img src="./medias/carousel/04.jpg" alt="Image 4">
+                     <img src="./medias/carousel/05.jpg" alt="Image 5">
+                  </figure>
+            </article>
+         </section>
+         <section id="theater">
+            <article>
+               <button id="loca">Trouver un cinema !</button>
+               <div class="api" id="API_leaflet"></div>
+            </article>
+         </section>
+      </main>
+
+   </body>
+
+</html>
